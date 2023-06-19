@@ -22,12 +22,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/inventorydata','App\Http\Controllers\InventoryController@mainpage');
-Route::post('/inventorydata/create','App\Http\Controllers\InventoryController@create');
-Route::get('/inventorydata/{id}/view','App\Http\Controllers\InventoryController@view');
-Route::get('/inventorydata/{id}/edit','App\Http\Controllers\InventoryController@edit');
-Route::post('/inventorydata/{id}/update','App\Http\Controllers\InventoryController@update');
-Route::get('/inventorydata/{id}/delete','App\Http\Controllers\InventoryController@delete');
+Route::get('/inventorydata','App\Http\Controllers\InventoryController@mainpage');//route for inventory mainpage
+Route::post('/inventorydata/create','App\Http\Controllers\InventoryController@create');//route for create item
+Route::get('/inventorydata/{id}/view','App\Http\Controllers\InventoryController@view');//route for view the selected item
+Route::get('/inventorydata/{id}/edit','App\Http\Controllers\InventoryController@edit');//route for edit the existing item
+Route::post('/inventorydata/{id}/update','App\Http\Controllers\InventoryController@update');//route for update the selected item
+Route::get('/inventorydata/{id}/delete','App\Http\Controllers\InventoryController@delete');//route for delete selected item
 
 Route::get('/vendordata','App\Http\Controllers\VendorController@mainpage');//route for view vendor page
 Route::post('/vendordata/create','App\Http\Controllers\VendorController@create');//route for create vendor
