@@ -15,6 +15,12 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link href="{{ route('payment.index') }}" :active="request()->routeIs('payment.index')">
+                        {{ __('Manage Payment') }}
+                    </x-nav-link>
+                </div>
+
                 </div>
 
                 <!-- Navigation Links -->
@@ -38,6 +44,7 @@
                     </x-nav-link>
                 </div>
                 
+
 
             </div>
 
