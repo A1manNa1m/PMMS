@@ -56,12 +56,16 @@
                                                     <!-- button edit  -->
                                                     <a href="vendordata/{{$VendorModel->id}}/edit"><button class="btn btn-info btn-sm" style="background-color: orange;"><i class="fa fa-eye" aria-hidden="true"></i>Edit</button></a>
                                                     
-                                                    <!-- button delete -->
+                                                    <!-- DeleteVendorForm -->
                                                     <form method="GET" action="vendordata/{{$VendorModel->id}}/delete" accept-charset="UTF-8" style="display:inline">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
+                                                        
+                                                        <!-- button delete -->
                                                         <button type="submit" class="btn btn-danger btn-sm" title="Delete Vendor" style="background-color:red" onclick="return confirm(&quot;Are you sure to delete this report?!&quot;)"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                                                     </form>
+                                                    <!-- DeleteVendorForm -->
+
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -74,7 +78,7 @@
                 </div>
             </div>
 
-            <!-- Modal for add vendor -->
+            <!-- AddVendorForm -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -159,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal for add vendor -->
+            <!-- AddVendorForm-->
 
         </div>
     </div>

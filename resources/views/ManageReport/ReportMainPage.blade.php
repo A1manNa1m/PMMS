@@ -53,12 +53,15 @@
                                                     <!-- button edit -->
                                                     <a href="reportdata/{{$ReportModel->id}}/edit"><button class="btn btn-info btn-sm" style="background-color: orange;"><i class="fa fa-eye" aria-hidden="true"></i>Edit</button></a>
                                                     
-                                                    <!-- button delete -->
+                                                    <!-- DeleteReportForm -->
+                                                        <!-- button delete -->
                                                     <form method="GET" action="reportdata/{{$ReportModel->id}}/delete" accept-charset="UTF-8" style="display:inline">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-danger btn-sm" title="Delete Vendor" style="background-color:red" onclick="return confirm(&quot;Are you sure to delete this report?!&quot;)"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                                                     </form>
+                                                    <!-- DeleteReportForm -->
+                                                    
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -71,7 +74,7 @@
                 </div>
             </div>
 
-            <!-- Modal for manual report-->
+            <!-- ManualReportForm-->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -121,9 +124,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal for manual report -->
+            <!-- ManualReportForm -->
 
-            <!-- Modal for generate report-->
+            <!-- GenerateReportForm -->
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -170,7 +173,7 @@
 
                 </div>
             </div>
-            <!-- Modal for generate report-->
+            <!-- GenerateReportForm -->
 
         </div>
     </div>
