@@ -21,6 +21,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/inventorydata','App\Http\Controllers\InventoryController@mainpage');
+Route::post('/inventorydata/create','App\Http\Controllers\InventoryController@create');
+Route::get('/inventorydata/{id}/view','App\Http\Controllers\InventoryController@view');
+Route::get('/inventorydata/{id}/edit','App\Http\Controllers\InventoryController@edit');
+Route::post('/inventorydata/{id}/update','App\Http\Controllers\InventoryController@update');
+Route::get('/inventorydata/{id}/delete','App\Http\Controllers\InventoryController@delete');
+
 Route::get('/vendordata','App\Http\Controllers\VendorController@mainpage');//route for view vendor page
 Route::post('/vendordata/create','App\Http\Controllers\VendorController@create');//route for create vendor
 Route::get('/vendordata/{id}/view','App\Http\Controllers\VendorController@view');//route for view selected vendor
@@ -48,3 +56,4 @@ Route::middleware([
 
 // Route::get('vendordata', [VendorController::class, 'mainpage'])->name('vendordata');
 // Route::get('reportdata', [ReportController::class, 'mainpage'])->name('reportdata');
+
