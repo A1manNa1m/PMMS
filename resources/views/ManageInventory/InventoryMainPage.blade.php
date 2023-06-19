@@ -15,8 +15,8 @@
                 @endif
 
             <div class="row">
-                <div class="col-md-9">
-                    <div class="card" style="width: 135%; margin:0 auto;">
+                <div style="display: flex; justify-content: center;">
+                    <div class="card" style="width: 70%;">
                         <div class="card-header"><h2>Inventory Information</h2></div>
                         <div class="card-body">                                                                                                                                                                                                                                                                                                                                                                                      
                             <button class="btn btn-primary" style="background-color: green;" onclick="openAddModal()">Add New Item</button>

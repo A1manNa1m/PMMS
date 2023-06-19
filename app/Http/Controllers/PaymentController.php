@@ -12,12 +12,15 @@ class PaymentController extends Controller
     $payments= Payment::all();
     return view('payment.PaymentMainPage', ['payments' => $payments]);
    }  //This index controller will direct the user to the main page
+
    public function create(){
     return view('payment.InsertPaymentDetails');
     } //This create controller will allow the user to view and insert the create payment form
+
     public function view(Payment $payment){
         return view('payment.ViewPaymentDetails', ['payment'=> $payment]);
     } 
+
     public function store(Request $request){         
     Payment::create($request->all());
     return redirect('/payment');

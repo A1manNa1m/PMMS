@@ -25,20 +25,12 @@ Route::get('/', function () {
 
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index'); //Routes for mainpage
-
 Route::get('/payment/{payment}/view', [PaymentController::class, 'view'])-> name('payment.view'); //Route for view payment details
-
 Route::get('/payment/create', [PaymentController::class, 'create'])->name('payment.create'); //Route for create payment details
-
 Route::post('/payment', [PaymentController::class, 'store'])->name('payment.store'); //Route for store payment details
-
 Route::get('/payment/{payment}/edit', [PaymentController::class, 'edit'])-> name('payment.edit'); //Routes for edit payment details
-
 Route::put('/payment/{payment}/update',[PaymentController::class, 'update'])->name('payment.update'); //Routes for update payment details
-
 Route::delete('/payment/{payment}/destroy',[PaymentController::class, 'destroy'])->name('payment.destroy'); //Routes for delete payment details
-
-
 
 Route::get('/inventorydata','App\Http\Controllers\InventoryController@mainpage');//route for inventory mainpage
 Route::post('/inventorydata/create','App\Http\Controllers\InventoryController@create');//route for create item
