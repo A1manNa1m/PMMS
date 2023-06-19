@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/inventorydata','App\Http\Controllers\InventoryController@mainpage');
+Route::post('/inventorydata/create','App\Http\Controllers\InventoryController@create');
+Route::get('/inventorydata/{id}/view','App\Http\Controllers\InventoryController@view');
+Route::get('/inventorydata/{id}/edit','App\Http\Controllers\InventoryController@edit');
+Route::post('/inventorydata/{id}/update','App\Http\Controllers\InventoryController@update');
+Route::get('/inventorydata/{id}/delete','App\Http\Controllers\InventoryController@delete');
