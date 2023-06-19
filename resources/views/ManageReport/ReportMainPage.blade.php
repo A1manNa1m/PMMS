@@ -35,7 +35,7 @@
                                             <th>ID</th>
                                             <th>Date</th>
                                             <th>Type of Sales</th>
-                                            <th>Total Sales</th>
+                                            <th>Total Sales(RM)</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -45,7 +45,7 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $ReportModel->Date }}</td>
                                                 <td>{{ $ReportModel->Type }}</td>
-                                                <td>RM {{ $ReportModel->Sales }}</td>
+                                                <td>{{ $ReportModel->Sales }}</td>
                                                 <td>
                                                     <!-- button view -->
                                                     <a href="reportdata/{{($ReportModel->id)}}/view"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

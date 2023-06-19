@@ -9,7 +9,7 @@ class InventoryController extends Controller
     // controller will direct to mainpage
     public function mainpage(){
         $inventory_data = \App\Models\InventoryModel::all();
-        return view('InventoryMainPage',['inventory_data'=> $inventory_data]);
+        return view('ManageInventory.InventoryMainPage',['inventory_data'=> $inventory_data]);
     }
     // controller for add item
     public function create(Request $request){
@@ -19,12 +19,12 @@ class InventoryController extends Controller
 // controller for view the item registered
     public function view($id){
         $inventory_data = \App\Models\InventoryModel::find($id);
-        return view('ViewRemainingItem',['inventory_data'=> $inventory_data]);
+        return view('ManageInventory.ViewRemainingItem',['inventory_data'=> $inventory_data]);
     }
 // controller for edit the data
     public function edit($id){
         $inventory_data = \App\Models\InventoryModel::find($id);
-        return view('UpdateItem',['inventory_data'=> $inventory_data]);
+        return view('ManageInventory.UpdateItem',['inventory_data'=> $inventory_data]);
     }
     // controller for update the item
     public function update(Request $request, $id){

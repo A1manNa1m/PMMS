@@ -32,8 +32,8 @@
 
                         <!-- sales field -->
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Sales</label>
-                            <input name="Sales" type="text" class="form-control" id="exampleFormControlInput1" value="RM {{$report_data->Sales}}" readonly>
+                            <label for="exampleFormControlInput1" class="form-label">Sales(RM)</label>
+                            <input name="Sales" type="text" class="form-control" id="exampleFormControlInput1" value="{{$report_data->Sales}}" readonly>
                         </div>
 
                     </div>

@@ -1,7 +1,13 @@
-@extends('Layout')
-@section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Inventory') }}
+        </h2>
+    </x-slot>
 
-    <div class="card" style="width: 70%;padding: 10px;margin: 0 auto;">
+    <div class="py-12">
+        <div class="container">
+        <div class="card" style="width: 70%;padding: 10px;margin: 0 auto;">
         <div class="card-header"><h2>Inventory Information</h2></div>
             <div class="card-body">
                 <div class="modal-body">
@@ -38,15 +44,18 @@
                             <input name="ItemDateUpdated" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Enter Latest Update" value="{{$inventory_data->ItemDateUpdated}}">
                         </div>
 
+                        <!-- button for cancel -->
+                        <a href="/inventorydata" class="btn btn-secondary" title="Back to Main Page" style="background-color:grey"><i class="fa fa-plus" aria-hidden="true"></i>CANCEL</a>
                         <!-- button for submit -->
-                        <button type="submit" class="btn btn-success btn-sm">UPDATE</button>
+                        <button type="submit" class="btn btn-success" style="background-color:green" >UPDATE</button>
+                        
                     </form>
-                    <!-- button for cancel -->
                     </div>
-                    <a href="/inventorydata" class="btn btn-danger btn-sm" title="Back to Main Page"><i class="fa fa-plus" aria-hidden="true"></i>CANCEL</a>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
     </div>
+</x-app-layout>
 
-@endsection

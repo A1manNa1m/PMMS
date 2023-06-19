@@ -19,6 +19,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="/inventorydata" :active="request()->routeIs('inventorydata')">
+                        {{ __('Inventory') }}
+                    </x-nav-link>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="/vendordata" :active="request()->routeIs('vendordata')">
                         {{ __('Vendor') }}
                     </x-nav-link>

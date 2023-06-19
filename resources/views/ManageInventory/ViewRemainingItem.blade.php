@@ -1,7 +1,13 @@
-@extends('Layout')
-@section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
 
-    <div class="card" style="width: 60%;padding: 10px;margin: 0 auto;">
+    <div class="py-12">
+        <div class="container">
+        <div class="card" style="width: 60%;padding: 10px;margin: 0 auto;">
         <div class="card-header"><h2>Inventory Information</h2></div>
             <div class="card-body">
                 <div class="modal-body">
@@ -37,10 +43,11 @@
 
                         <!-- button for back to mainpage -->
                     </div>
-                    <a href="/inventorydata" class="btn btn-success btn-sm" title="Back to Index"><i class="fa fa-plus" aria-hidden="true"></i>BACK</a>
+                    <a href="/inventorydata" class="btn btn-success" title="Back to Index"><i class="fa fa-plus" aria-hidden="true"></i>BACK</a>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
     </div>
-
-@endsection
+</x-app-layout>

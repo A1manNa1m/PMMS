@@ -42,14 +42,14 @@
                     </div>
 
                     <!-- button for submit -->
-                    <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                    <button type="submit" class="btn btn-success" id="submitButton" style="background-color:green">Submit</button>
 
                 </form>
             </div>
 
             <!-- button for cancel -->
              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" onclick="cancelModal()" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" style="background-color:grey" onclick="cancelModal()" data-bs-dismiss="modal">Cancel</button>
             </div>
 
             <script>
