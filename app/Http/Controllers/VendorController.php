@@ -9,7 +9,7 @@ class VendorController extends Controller
     // this controller will display the mainpage of report
     public function mainpage(){
         $vendor_data = \App\Models\VendorModel::all();
-        return view('Admin.ManageVendor.VendorMainPage',['vendor_data'=> $vendor_data]);
+        return view('ManageVendor.VendorMainPage',['vendor_data'=> $vendor_data]);
     }
         
     // this controller will create new vendor
@@ -21,13 +21,13 @@ class VendorController extends Controller
     // this controller will retrieve vendor id and display it
     public function view($id){
         $vendor_data = \App\Models\VendorModel::find($id);
-        return view('Admin.ManageVendor.ViewVendorForm',['vendor_data'=> $vendor_data]);
+        return view('ManageVendor.ViewVendorForm',['vendor_data'=> $vendor_data]);
     }
 
     // this controller will retrieve vendor id and display it to user for edit
     public function edit($id){
         $vendor_data = \App\Models\VendorModel::find($id);
-        return view('Admin.ManageVendor.EditVendorForm',['vendor_data'=> $vendor_data]);
+        return view('ManageVendor.EditVendorForm',['vendor_data'=> $vendor_data]);
     }
 
     // this controller will update vendor
